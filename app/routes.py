@@ -7,8 +7,6 @@ from .bookeltfactory import merge_pdfs
 
 collection = DatabaseHandler()
 
-collection.delete_song('bruce springsteen', "test1")
-
 @app.route("/", methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
