@@ -7,6 +7,7 @@ from .bookeltfactory import merge_pdfs
 
 collection = DatabaseHandler()
 
+
 @app.route("/", methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
@@ -77,8 +78,8 @@ def results():
 
     for artistname in artists:  #Loop artists
             for word in artistname.split():  # Loop words in song name
-                if searchtext in word:  # If match or close match, add to result.
-                    for song in collection.get_all_songs_from_artist(artistname):
+                if searchtext.lower() in word.lower():  # If match or close match, add to result.
+                    for song in collection.get_all_songs_from_artist(artistname):  # TODO: Implement binarysearch?
                         results.append(song)
     
     for song in songs:  #Loop songs
