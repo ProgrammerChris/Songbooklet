@@ -5,3 +5,5 @@ Fullstack Web-app made in flask to choose different PDFs with lyrics and tabs, t
 - Backend: Python (Flask), Gunicorn, Nginx
 - Frontend: HTML, CSS and a squirt of JS and jquery
 - Host: DigitalOcean Droplet (Ubuntu 18.06)
+
+# [Checkout the site here!](http://178.128.254.188/)
