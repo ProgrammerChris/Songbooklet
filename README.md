@@ -1,5 +1,5 @@
 # Songbooklet (Norwegian, for now atleast)
-Fullstack Web-app made in flask to choose different PDFs with lyrics and tabs, to make and download a booklet of all the chosen songs. (3 for now, more to be added.)
+Fullstack Web-app made in flask to choose different PDFs with lyrics and tabs, to make and download a booklet of all the chosen songs. 
 
 - Database : MongoDB Atlas
 - Backend: Python (Flask), Gunicorn, Nginx
