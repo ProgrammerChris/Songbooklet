@@ -1,0 +1,94 @@
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+form  {
+  display: grid;
+
+}
+
+#main   {
+        justify-content: center;
+        align-content: center;
+}
+
+#menu {
+  padding-right: 2em;
+}
+
+#menu ul  {
+    list-style: none;
+  }
+  #menu li  {
+    display: inline;
+    font-size: 2em;
+    color: #fff;
+    padding: 1em;
+    font-family: 'Segoe UI';
+    text-align: center;
+  }
+
+#icon-songs  {
+  height: .8em;
+  width: .7em;
+  padding-right: .2em;
+}
+
+#icon-artists  {
+  height: .8em;
+  width: .7em;
+  padding-right: .2em;
+}
+
+.search {
+  display: inline;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.searchbar {
+  font-size: 2.4em;
+  width: 12em;
+  height: 2em;
+  border-radius: 10em;
+  text-align: center;
+  background: #fff;
+  border: none;
+
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+.searchbutton {
+  font-size: 6em; /* This controls the size. */
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border: 0.05em solid #888;
+  background: #fff;
+  position: relative;
+  top: -.7em;
+  right: -4.2em;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+  .searchbutton::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: .25em;
+    top: .37em;
+    border-radius: 20%;
+    border-width: 0;
+    background: #888;
+    width: 0.32em;
+    height: 0.08em;
+    -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+  }

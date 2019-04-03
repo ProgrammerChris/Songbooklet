@@ -1,0 +1,31 @@
+{% extends "rightsidemenu.html" %}
+
+
+{% block content %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artists.css') }}">
+
+</head>
+
+<body style="visibility: hidden;" onload="js_load()">
+
+    <button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
+    
+<div id="main">
+    <div id="mainmenu">
+        <h1>Artister</h1>
+        <ul>
+            {% for artist in artists: %}
+            <li>
+                <form action="{{ url_for('artist', artist=artist) }}">
+                    <button id="{{ artist.lower().replace(' ', '') }}" type="submit" class="artist">
+                        <p class="artistp">{{ artist.title() }}</p>
+                    </button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

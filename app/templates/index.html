@@ -1,0 +1,28 @@
+{% extends "rightsidemenu.html" %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body style="visibility: hidden;" onload="js_load()">
+<div id="main">
+    <h1>Sanghefte</h1>
+
+    <div id="menu">
+        <ul>
+            <li><a href="songs"><img src="../static/images/sanger_small.png" alt="Note" id="icon-songs">Sanger</a></li>
+            <li><a href="artists"><img src="../static/images/artister_small.png" alt="Artist" id="icon-artists">Artister</a></li>
+        </ul>
+    </div>
+
+    <!--SEARCH-->
+    <div>
+        <form action="{{ url_for('results', searchtext=searchtext)}}">
+            <input id="searchbar" class="searchbar" name="searchbar" type="search" autocomplete="off" placeholder="Artist eller sang" label="searchbutton">
+            <button type="submit" class="searchbutton" name="searchbutton"></button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

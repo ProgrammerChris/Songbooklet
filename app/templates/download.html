@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title>Last ned</title>
+    <link rel="favicon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta name="Description" content="  Creator: Chris Tvedt,
+                                        usage:   Create song booklets by choosing songs in the lists given and click the create booklet button.
+                                                 Lag sanghefte ved å velge sanger i menyene som er gitt på de forskjellige siden og trykk lag hefte.">    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/download.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+
+</head>
+
+<body style="visibility: hidden;" onload="js_load()">
+    
+<button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
+
+    <div id="main">
+        <h1>Last ned hefte</h1>
+        <h2>Navn på hefte</h2>
+
+        <input type="text" id="bookletname" autocomplete="off" placeholder="Skriv navn på hefte">
+        <input type="button" id="downloadbutton" class="table" value="Last ned hefte">
+    </div>
+    <script src="{{ url_for('static', filename='js/fouc_fix.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+.mainmenusongname {
+    font-size: 1.1em;
+    background: transparent;
+    border: hidden;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.mainmenuartistname {
+    font-size: 0.7em;
+    background: transparent;
+    border: hidden;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+#main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.song p  {
+  text-align: center;
+  font-family: 'Segoe UI';
+  margin: 0;
+  
+}
+
+.songline{
+    display: block;
+    font-family: 'Segoe UI';
+    background: white;
+    border: hidden;
+    font-size: 1.3em;
+    width: 20em;
+    height: 2.5em;
+    border-radius: 1em;
+    text-align: center;
+    margin-bottom: .4em;
+    cursor: pointer;
+}
+
+.songbutton {
+    border: hidden;
+    background-color: transparent;
+}
+
+.songinput {
+    background: transparent;
+    border: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: -1em;
+    cursor: pointer;
+    position: relative;
+    top: -4em;
+}
+.songinput:focus {
+  outline:0;
+}

@@ -1,0 +1,104 @@
+@media screen and (max-width: 300px)  {
+    html  {
+      font-size: 15px;
+    }
+  }
+  
+@media screen and (max-width: 375px)  {
+  html  {
+    font-size: 11px;
+  }
+}
+  
+@media screen and (max-width: 414px)  {
+  html  {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 736px)  {
+  html  {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 740px)  {
+  html  {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px)  {
+  html  {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 812px)  {
+  html  {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 834px)  {
+  html  {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px)  {
+  html  {
+    font-size: 20px;
+  }
+}
+  
+html  {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #F93737, #AC1972 )
+}
+
+body  {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  overflow: hidden;
+}
+
+h1  {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI';
+  font-size: 5em;
+}
+
+h2  {
+  text-align: center;
+  color: #000000;
+  font-family: 'Segoe UI';
+  font-size: 2em;
+}
+
+#main   {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  transition: all .4s;
+  transition-delay: .1s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#backtrackbutton  {
+  font-size: 4em;
+  color: #fff;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  margin: .5em;
+}

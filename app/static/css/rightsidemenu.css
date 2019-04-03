@@ -1,0 +1,235 @@
+@media screen and (min-width: 300px)  {
+  html  {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 375px)  {
+  html  {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 667px)  {
+
+  #rightside  {
+    display: grid !important;
+    grid-template-rows: 9fr 1fr;
+  }
+
+  .listbutton {
+    display: none !important;
+  }
+
+  body {
+    display: grid !important;
+  }
+}
+
+@media screen and (min-width: 740px)  {
+  html  {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 768px)  {
+  html  {
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (min-width: 1024px)  {
+  html  {
+    font-size: 20px;
+  }
+
+}
+
+html  {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #F93737, #AC1972 );
+  overflow: hidden;
+}
+
+body  {
+  height: 100%;
+  grid-template-columns: 3fr minmax(300px, 1fr);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+h1  {
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI';
+  font-size: 5em;
+  margin: auto;
+}
+
+h2  {
+  text-align: center;
+  font-family: 'Segoe UI';
+  margin: .2em;
+}
+
+p {
+  margin: .2em;
+}
+
+hr  {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main   {
+    display: grid;
+    transition: all .4s;
+    transition-delay: .1s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+#mainmenu {
+  display: grid;
+  padding: 0;
+  justify-self: center;
+}
+
+#mainmenu ul  {
+  list-style: none;
+  padding-left: 0;
+}
+
+#backtrackbutton  {
+  font-size: 4em;
+  color: #fff;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 1em;
+  margin: .5em;
+}
+
+#showlistbutton{
+  background: inherit;
+  border: none;
+  position: absolute;
+  top: 2em;
+  right: 1em;
+  cursor: pointer;
+}
+
+#hidelistbutton{
+  background: inherit;
+  border: none;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.listbutton div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+
+#barone {
+  -webkit-transform: rotate(-45deg) translate(0em, .5em);
+  -moz-transform: rotate(-45deg) translate(0em, .5em);
+  -ms-transform: rotate(-45deg) translate(0em, .5em);
+    -o-transform: rotate(-45deg) translate(0em, .5em);
+}
+
+#bartwo {
+  -webkit-transform: rotate(45deg) translate(-.1em, -.5em);
+  -moz-transform: rotate(45deg) translate(-.1em, -.5em);
+  -ms-transform: rotate(45deg) translate(-.1em, -.5em);
+    -o-transform: rotate(45deg) translate(-.1em, -.5em);
+}
+
+#rightside  {
+  background: #fff;
+  overflow: hidden;
+}
+
+#list  {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#sidemenu li{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    line-height: 1em;
+    padding-bottom: .5em;
+    font-family: 'Segoe UI';
+}
+
+#sidemenu li form{
+  display: grid;
+}
+
+.chosen  {
+  grid-column: 1;
+  padding-left: 1em;
+}
+  .songname {
+    font-size: 1.3em;
+  }
+
+  .artistname {
+    font-size: 0.7em;
+    padding-left: .3em;
+  }
+
+  .trashcan {
+    grid-column: 2;
+    background-image: url("../images/trash_small.png");
+    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 2em;
+    width: 1.2em;
+    border: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;   
+    padding-right: 2em;
+    cursor: pointer;
+  }
+  .trashcan:focus {
+    outline:0;
+  }
+
+#makebookletbutton {
+  border: none;
+  background: #707070;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: 'Segoe UI';
+  font-size: 1.5em;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 3em;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+#makebookletbutton:focus {
+  outline:0;
+}

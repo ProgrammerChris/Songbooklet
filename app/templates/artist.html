@@ -1,0 +1,26 @@
+{% extends "rightsidemenu.html" %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artist.css') }}">
+</head>
+
+<body style="visibility: hidden;" onload="js_load()">
+
+    <button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
+<div id="main">
+    <div id="mainmenu">
+        <h1>{{ artist.title() }}</h1>
+        <ul>
+            {% for song in songs:%}
+                <li class="song">
+                    <button id="{{(artist + song).lower().replace(' ', '') }}" type="button" class="songnamebutton" onclick="addToSideMenu('{{ (artist + song).lower().replace(' ', '') }}', '{{ artist.title() }}', '{{ song.title() }}')">
+                        <p class="buttontext">{{ song }}</p>
+                    </button>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

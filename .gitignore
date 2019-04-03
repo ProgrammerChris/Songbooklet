@@ -1,0 +1,6 @@
+cl_scripts
+__pycache__
+design
+.idea
+.vscode
+config.py

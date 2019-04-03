@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" lang="no">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sanghefte</title>
+    <meta name="Description" content="  Creator: Chris Tvedt,
+                                        usage:   Create song booklets by choosing songs in the lists given and click the create booklet button.
+                                                 Lag sanghefte ved å velge sanger i menyene som er gitt på de forskjellige siden og trykk lag hefte.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rightsidemenu.css') }}">
+    <link rel="favicon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    
+    
+    {% block content %} {% endblock %}
+
+
+    <button class="listbutton" name="showlistbutton" id="showlistbutton" onclick="opensidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    <button class="listbutton" name="hidelistbutton" id="hidelistbutton" onclick="closesidebar()" style="display: none;">
+        <div id="barone"></div>
+        <div id="bartwo"></div>
+    </button>
+
+    <div id="rightside">
+        <div id="list">
+            <h2>Valgte sanger</h2>
+            <hr width="50%">
+            <ul id="sidemenu">
+                
+            </ul>
+        </div>
+        <a id="makebooklet" href="{{ url_for('download') }}"><input type="button" class="table" id="makebookletbutton" value="Lag hefte!" name="makebookletbutton"/></a>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/listhandler.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/responsivemenu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/fouc_fix.js') }}"></script>
+    </body>
+
+</html>

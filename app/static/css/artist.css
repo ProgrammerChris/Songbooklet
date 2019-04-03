@@ -1,0 +1,33 @@
+#main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.song {
+  display: grid;
+  justify-content: center;
+}
+
+.songnamebutton    {
+    display: block;
+    font-family: 'Segoe UI';
+    background: white;
+    border: hidden;
+    font-size: 1.3em;
+    width: 20em;
+    height: 2.5em;
+    border-radius: 1em;
+    text-align: center;
+    margin-bottom: .4em;
+    cursor: pointer;
+}
+
+.songnamebutton:focus {
+  outline: 0;
+}
+
+.buttontext{
+    font-family: 'Segoe UI';
+    font-size: 1.3em;
+    line-height: 1em;
+}
