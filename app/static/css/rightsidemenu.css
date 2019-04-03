@@ -109,22 +109,19 @@ a {
 }
 
 #backtrackbutton  {
-  font-size: 4em;
-  color: #fff;
+  font-size: 6em;
   background: inherit;
   border: none;
   cursor: pointer;
-  display: block;
   position: absolute;
   top: 1em;
-  margin: .5em;
 }
 
 #showlistbutton{
   background: inherit;
   border: none;
   position: absolute;
-  top: 2em;
+  top: 1em;
   right: 1em;
   cursor: pointer;
 }
