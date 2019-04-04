@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html class="no-js" lang="">
-<head>
-    <meta charset="utf-8">
+{% extends "rightsidemenu.html" %}
+
+{% block content %}
     <title>Last ned</title>
     <link rel="favicon" href="{{ url_for('static', filename='favicon.ico') }}">
     <meta name="Description" content="  Creator: Chris Tvedt,
@@ -15,16 +14,14 @@
 
 <body style="visibility: hidden;" onload="js_load()">
     
-<button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
-
+    <button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
     <div id="main">
         <h1>Last ned hefte</h1>
-        <h2>Navn på hefte</h2>
+        <h3>Navn på hefte</h3>
 
         <input type="text" id="bookletname" autocomplete="off" placeholder="Skriv navn på hefte">
         <input type="button" id="downloadbutton" class="table" value="Last ned hefte">
     </div>
     <script src="{{ url_for('static', filename='js/fouc_fix.js') }}"></script>
-</body>
 
-</html>
+{% endblock %}
