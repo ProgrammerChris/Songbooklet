@@ -5,6 +5,7 @@ a {
 
 form  {
   display: grid;
+  justify-content: center;
 
 }
 
@@ -12,12 +13,9 @@ form  {
   display: grid;
 }
 
-#menu {
-  padding-right: 2em;
-}
-
 #menu ul  {
     list-style: none;
+    padding-left: 2em;
   }
   #menu li  {
     display: inline;
