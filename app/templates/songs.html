@@ -8,28 +8,36 @@
 <body style="visibility: hidden;" onload="js_load()">
 
     <button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
+    <button class="listbutton" name="showlistbutton" id="showlistbutton" onclick="opensidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    <button class="listbutton" name="hidelistbutton" id="hidelistbutton" onclick="closesidebar()" style="display: none;">
+        <div id="barone"></div>
+        <div id="bartwo"></div>
+    </button>
 
 <div id="main">
     <div id="mainmenu">
         <h1>Sanger</h1>
-
-        <div>
-            <ul>
-                {% for artist, songs in artists.items(): %}
-                    {% for song in songs %}
-                    <li id="{{ (artist + song).lower().replace(' ', '') }}">
-                        <form action="">
-                            <button type="button" class="songline" onclick="addToSideMenu('{{ (artist + song).lower().replace(' ', '') }}', '{{ artist.title() }}', '{{ song.title() }}')">
-                                <p class="mainmenusongname">{{ song.title() }}</p>
-                                <p class="mainmenuartistname">{{ artist.title() }}</p>
+        <ul>
+            {% for artist, songs in artists.items(): %}
+                {% for song in songs %}
+                <li id="{{ (artist + song).lower().replace(' ', '') }}">
+                    <div class="songline">
+                        <form class="mainmenusongbutton" id="{{ (artist + song).lower().replace(' ', '') }}" action="">
+                            <button type="button" class="mainmenusongname" onclick="addToSideMenu('{{ (artist + song).lower().replace(' ', '') }}', '{{ artist.title() }}', '{{ song.title() }}')">
+                                <div class="mainmenusongname">{{ song.title() }}</div>
+                                <div class="mainmenuartistname">{{ artist.title() }}</div>
                             </button>
                         </form>
-                    </li>
+                    </div>
+                </li>
 
-                    {% endfor %}
                 {% endfor %}
-            </ul>
-        </div>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 

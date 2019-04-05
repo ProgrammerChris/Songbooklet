@@ -1,6 +1,7 @@
 {% extends "rightsidemenu.html" %}
 
 {% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/songs.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
 
 </head>
@@ -8,15 +9,23 @@
 <body style="visibility: hidden;" onload="js_load()">
 
     <button id="backtrackbutton" onclick="window.history.back()">&laquo</button>
+    <button class="listbutton" name="showlistbutton" id="showlistbutton" onclick="opensidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    <button class="listbutton" name="hidelistbutton" id="hidelistbutton" onclick="closesidebar()" style="display: none;">
+        <div id="barone"></div>
+        <div id="bartwo"></div>
+    </button>
 
 <div id="main">
-    <h1>Resultater for "{{ searchtext.strip() }}"</h1>
-
     <div id="mainmenu">
+        <h1>Resultater for "{{ searchtext.strip() }}"</h1>
         <ul>
             {% if songs is string %}
                 <li>
-                    <div class="button">
+                    <div class="songline">
                         <form id="{{ (artist + song).lower().replace(' ', '') }}" action="">
                             <button type="button" class="mainmenusongname">
                                 <div class="mainmenusongname">{{ song.title() }}</div>
@@ -30,7 +39,7 @@
                     {% for song in songs %}
                         {% if song != "" %}
                         <li>
-                            <div class="button">
+                            <div class="songline">
                                 <form class="mainmenusongbutton" id="{{ (artist + song).lower().replace(' ', '') }}" action="">
                                     <button type="button" class="mainmenusongname" onclick="addToSideMenu('{{ (artist + song).lower().replace(' ', '') }}', '{{ artist.title() }}', '{{ song.title() }}')">
                                         <div class="mainmenusongname">{{ song.title() }}</div>

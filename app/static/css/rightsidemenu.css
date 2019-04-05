@@ -88,24 +88,25 @@ a {
 }
 
 #main   {
-    display: grid;
     transition: all .4s;
     transition-delay: .1s;
     overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
+    justify-content: center;
 }
-
 
 #mainmenu {
   display: grid;
   padding: 0;
-  justify-self: center;
+  align-self: center;
+  padding-top: 5em;
 }
 
 #mainmenu ul  {
   list-style: none;
   padding-left: 0;
+  justify-self: center;
 }
 
 #backtrackbutton  {
@@ -114,15 +115,15 @@ a {
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 1em;
+  left: .5em;
 }
 
 #showlistbutton{
   background: inherit;
   border: none;
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 2em;
+  right: 2em;
   cursor: pointer;
 }
 

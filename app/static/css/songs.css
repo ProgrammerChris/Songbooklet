@@ -3,7 +3,7 @@
     background: transparent;
     border: hidden;
     width: 100%;
-    margin: 0;
+    margin-top: -.05em;
     cursor: pointer;
 }
 
@@ -12,13 +12,8 @@
     background: transparent;
     border: hidden;
     width: 100%;
-    margin: 0;
+    margin-top: -.2em;
     cursor: pointer;
-}
-
-#main {
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .song p  {

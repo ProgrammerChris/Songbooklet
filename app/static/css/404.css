@@ -93,12 +93,11 @@ h2  {
 }
 
 #backtrackbutton  {
-  font-size: 4em;
-  color: #fff;
+  font-size: 6em;
   background: inherit;
   border: none;
   cursor: pointer;
-  display: block;
   position: absolute;
-  margin: .5em;
+  top: 1em;
+  left: .5em;
 }
