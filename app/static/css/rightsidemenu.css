@@ -88,12 +88,14 @@ a {
 }
 
 #main   {
-    transition: all .4s;
-    transition-delay: .1s;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%;
-    justify-content: center;
+  display: grid;
+  transition: all .4s;
+  transition-delay: .1s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
 }
 
 #mainmenu {
