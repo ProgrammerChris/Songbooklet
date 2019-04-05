@@ -8,6 +8,10 @@ form  {
 
 }
 
+#main {
+  display: grid;
+}
+
 #menu {
   padding-right: 2em;
 }

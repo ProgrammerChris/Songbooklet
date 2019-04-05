@@ -88,7 +88,6 @@ a {
 }
 
 #main   {
-  display: grid;
   transition: all .4s;
   transition-delay: .1s;
   overflow-y: auto;
