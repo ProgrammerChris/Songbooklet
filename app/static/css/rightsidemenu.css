@@ -80,7 +80,7 @@ p {
 
 hr  {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 2em;
 }
 
 a {
@@ -132,8 +132,8 @@ a {
   background: inherit;
   border: none;
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 2em;
+  right: 2em;
   cursor: pointer;
 }
 
@@ -167,6 +167,7 @@ a {
 #list  {
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 2em;
 }
 
 #sidemenu li{
