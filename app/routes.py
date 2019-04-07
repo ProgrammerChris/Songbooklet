@@ -77,16 +77,14 @@ def results():
     results = []  #set()
 
     for artistname in artists:  #Loop artists
-            for word in artistname.split():  # Loop words in song name
-                if searchtext.lower() in word.lower():  # If match or close match, add to result.
-                    for song in collection.get_all_songs_from_artist(artistname):  # TODO: Implement binarysearch?
-                        results.append(song)
+        if artistname.lower().find(searchtext.lower()) != -1:  # If match or close match, add to result.
+            for song in collection.get_all_songs_from_artist(artistname):  # TODO: Implement binarysearch?
+                results.append(song)
     
     for song in songs:  #Loop songs
         if song not in results:  # Skip if song aleady in the results.
-            for word in song.split():  # Loop words in song name
-                if searchtext in word:  # If match or close match, add to result.
-                    results.append(song)
+            if song.lower().find(searchtext.lower()) != -1:  # If match or close match, add to result.
+                results.append(song)
 
     # Assemble a dict to be used to create HTML element in browser when rendering.
     songline = defaultdict(list)  # To get a dict of list to be able to store duplicate keys.
