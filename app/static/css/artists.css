@@ -1,9 +1,3 @@
-
-#main {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 li{
   display: grid;
   justify-content: center;

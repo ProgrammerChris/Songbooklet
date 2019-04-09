@@ -2,6 +2,15 @@
   html  {
     font-size: 9px;
   }
+
+  #rightside    {
+    display: none;
+  }
+
+  body  {
+    display: grid;
+    grid-template-columns: auto;
+  }
 }
 
 @media screen and (min-width: 375px)  {
@@ -23,6 +32,7 @@
 
   body {
     display: grid !important;
+    grid-template-columns: 3fr minmax(300px, 1fr) !important;
   }
 }
 
@@ -54,7 +64,6 @@ html  {
 
 body  {
   height: 100%;
-  grid-template-columns: 3fr minmax(300px, 1fr);
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: local;
@@ -92,7 +101,6 @@ a {
   transition-delay: .1s;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
   justify-content: center;
   align-content: center;
 }

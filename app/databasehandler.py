@@ -14,15 +14,15 @@ class DatabaseHandler:
         """ Init the target collection in the mongoDB. In this case called 'Artists'
             Use the 'Development' collection while developing and testing.
         """
-        #self.collection = mongo.db.Development  # Development DB (Should be changing acc to .flaskenv FLASK_ENV)
-        self.collection = mongo.db.Artists  # Production DB
+        self.collection = mongo.db.Development  # Development DB (Should be changing acc to .flaskenv FLASK_ENV)
+        #self.collection = mongo.db.Artists  # Production DB
 
     def get_artists(self):
-        """Gets all '_id' fields from all documents."""
+        """Gets all '_id' fields from all documents. Returns a list"""
         return self.collection.find().distinct('_id')
 
     def get_all_songs(self):
-        """Gets all 'songs' fields from all documents containing that field."""
+        """Gets all 'songs' fields from all documents containing that field. Returns a list"""
         return self.collection.find().distinct('songs')
 
     def get_all_songs_from_artist(self, artist):
