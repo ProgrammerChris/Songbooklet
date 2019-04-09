@@ -60,12 +60,12 @@ def results():
     if searchtext.strip() == '':
         return render_template('results.html', searchtext=searchtext, artists=artists_from_db, songs=songs_from_db, songline=get_all_songs())
 
-    artists.sort()
+    artists_from_db.sort()
     results = []  #set()
 
     for artistname in artists_from_db:  #Loop artists
         if artistname.lower().find(searchtext.lower()) != -1:  # If match or close match, add to result.
-            for song in collection.get_all_songs_from_artist(artistname):  # TODO: Implement binarysearch?
+            for song in collection.get_all_songs_from_artist(artistname):
                 results.append(song)
     
     for song in songs_from_db:  #Loop songs
@@ -78,7 +78,7 @@ def results():
     for song in results:
         songline[''.join(collection.get_artist_by_song(song))].append(song)
 
-    return render_template('results.html', searchtext=searchtext, artists=artists, songs=songs, songline=songline)
+    return render_template('results.html', searchtext=searchtext, artists=artists_from_db, songs=songs, songline=songline)
 
 
 @app.route('/download', methods=['GET', 'POST'])
