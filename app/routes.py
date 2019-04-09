@@ -1,5 +1,4 @@
 from app import app
-from apscheduler.schedulers.background import BackgroundScheduler
 from collections import defaultdict, OrderedDict
 from flask import render_template, request, send_file, session
 import os
