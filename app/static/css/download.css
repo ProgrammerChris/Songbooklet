@@ -49,3 +49,7 @@ h3  {
 #downloadbutton:focus {
   outline: 0;
 }
+
+#makebooklet  {
+  display: none;
+}
